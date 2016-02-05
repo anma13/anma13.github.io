@@ -27,7 +27,14 @@ a:hover {
     position: fixed;
     width: 100%;
     height: 50px;
-    opacity: 0.8;
+}
+
+#pseudo-navbar {
+	width: 100%;
+	height: 50px;
+	top: 0;
+	left: 0;
+	display: block;
 }
 
 #navbar-items {
@@ -42,34 +49,31 @@ a:hover {
 
 #about {
 	float: left;
-	width: 250px;
+	width: 33%;
 	text-align: center;
 	line-height: 50px;
 	height: 50px;
-	padding: 0px 100px 0px 100px;
  }
 
 #about-header {
-	width: 80px;
+	width: 62px;
 	height: 50px;
 	text-align: center;
 	line-height: 50px;
-	cursor: pointer;
 	margin: 0 auto;
 	cursor: pointer;
 }
 
 #contact {
 	float: left;
-	width: 200px;
+	width: 33%;
 	text-align: center;
 	line-height: 50px;
 	height: 50px;
-	padding: 0px 100px 0px 100px;
 }
 
 #contact-header {
-	width: 150px;
+	width: 84px;
 	height: 50px;
 	text-align: center;
 	line-height: 50px;
@@ -79,11 +83,10 @@ a:hover {
 
 #portfolio {
 	float: left;
-	width: 200px;
+	width: 33%;
 	text-align: center;
 	line-height: 50px;
 	height: 50px;
-	padding: 0px 100px 0px 100px;
 }
 
 #portfolio-header {
@@ -97,15 +100,14 @@ a:hover {
 
 #home {
 	float: left;
-	width: 200px;
+	width: 33%;
 	text-align: center;
 	line-height: 50px;
 	height: 50px;
-	padding: 0px 100px 0px 100px;
 }
 
 #home-header {
-	width: 150px;
+	width: 52px;
 	height: 50px;
 	text-align: center;
 	line-height: 50px;
@@ -218,9 +220,14 @@ a:hover {
 
 .background-image {
 	width: 100%;
-	height: 100%;
+	max-height: 100%;
 	z-index: -5;
 	opacity: 0.3;
+}
+
+.background-image img {
+	max-width: 100%;
+	overflow: hidden;
 }
 
 .textbox-right {
@@ -233,6 +240,11 @@ a:hover {
 	padding: 20px;
 	opacity: 1;
 	line-height: 30px;
+}
+
+.textbox-right a {
+	color: 	blue;
+
 }
 
 .textbox-left {
@@ -268,6 +280,18 @@ a:hover {
 	right: 75px;
 }
 
+.photo-left img {
+	max-height: 100%;
+	display: block;
+  	
+}
+
+.photo-right img {
+	max-height: 100%;
+  	display: block;
+  	
+}
+
 #name-section {
 	background-color: white;
 }
@@ -299,51 +323,56 @@ a:hover {
 }
 
 #contact-section-section {
-	background-color: #D3F7C6;
+	background-color: #E0E0E0;
 }
 
 #contact-section-text {
 	position: absolute;
-	left: 178px;
+	left: 470px;
 	top: 160px;
 	z-index: 2;
 	font-size: 30px;
 	font-weight: 300;
 	opacity: 1;
 	line-height: 30px;
-	text-align: center;
-	margin: 0 auto;
 }
 
 /*Portfolio Page*/
+#genre-header {
+    width: 100%;
+    height: 70px;
+    top: 5px;
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: lowercase;
+    font-family: "Roboto Condensed", sans-serif;
+    line-height: 70px;
+    position: relative;
+    display: inline-block;
+}
 
 #portfolio-wrapper {
-	width: 2700px;
+	width: 100%;
 	top: 50px;
 	height: calc(100% - 50px);
 	margin: 0 auto;
 	position: relative;
 }
 
-#portfolio-container-1 {
-	width: 1230px;
-	height: 590px;
+.portfolio-container {
+	width: 100%;
+	/*height: 590px;*/
 	position: relative;
-	margin: 0;
+	margin: 0 auto;
 	left: 60px;
+	/*top: 40px;*/
 	bottom: 0px;
-	float: left;
+	float: none;
+	display: block;
 }
 
-#portfolio-container-2 {
-	width: 1230px;
-	height: 590px;
-	position: relative;
-	margin: 0;
-	left: 60px;
-	bottom: 0px;
-	float: right;
-}
 
 #arrow-left {
 	width: auto;
@@ -388,11 +417,17 @@ a:hover {
 .item-photo {
 	width: 325px;
 	height: 230px;
-	background-color: black;
 	top: calc(50% - 175px);
 	overflow: hidden;
 	cursor: pointer;
 	opacity: 1;
+}
+
+.item-photo img {
+  max-width:100%; 
+  margin:auto;
+  display: block;
+  vertical-align: middle;
 }
 
 .item-photo:hover {
